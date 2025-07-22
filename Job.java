@@ -1,4 +1,4 @@
-public class Job {
+public class Job implements Comparable<Job> {
 
     private String name;
     private int priority;
@@ -20,4 +20,8 @@ public class Job {
         return this.priority;
     }
 
+    @Override
+    public int compareTo(Job o) {
+        return this.priority - o.priority;
+    }
 }
